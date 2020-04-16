@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: raveerkpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: raveerkpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: raveerkpipelinesjavascriptdocker 
+          image: erikregistry.azurecr.io/raveerkpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
